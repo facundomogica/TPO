@@ -15,11 +15,13 @@
 <body>
     <h1> Contacto</h1>
     <h3>Este formulario es para contactar a los administradores.</h3>
-    <form action="Principal.html">
+    <form action="index.html">
         <label for="Nombre">Nombre:</label><br>
         <input type="text" id="Nombre" name="Nombre" value=""><br>
-        <label for="Email">Email:</label><br>
-        <input type="text" id="Email" name="Email" value=""><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <div class="error" style="display:none;">Por favor, ingresa un email válido.</div>
+        <br>
         <label for="Razon">Motivo</label><br>
        <select id="Razon" name="Razon">
             <option value="Elegir">Elegir</option>
@@ -29,7 +31,14 @@
         </select><br><br>
         <input type="submit" value="Enviar">
       </form> 
-    
+      <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+          if (!event.target.checkValidity()) {
+            event.preventDefault();
+            document.querySelector('.error').style.display = 'block';
+          }
+        });
+        </script>
     
 </body>
 </html>
