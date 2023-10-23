@@ -5,23 +5,29 @@ body {
     color: black;
     background-color: green;
     text-align: center;
-    text-shadow: 2px 2px 5px;
     text-shadow: 2px 2px 5px ;
     animation-name: ejemplo;
     animation-duration: 4s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
-    display: flex;
-    flex-direction: row;
     
-    /* flex-wrap: nowrap; por defecto */
-    flex-wrap: wrap;
+}
+@keyframes ejemplo {
+    0% {from{ background-color: green;}}
+    33% {from{ background-color: greenyellow;}}
+    66% {from{ background-color: green;}}
+   100% {from{ background-color: greenyellow;}}
+
+
+}
+.sticky{
+    position: sticky;
+    background-color: #c9f3c9;
+    background-size: auto;
+    font-size: 160%;
+    text-align: center;
+    text-decoration: none;
     
-    display: flex;
-    flex-direction: row;
-    
-    /* flex-wrap: nowrap; por defecto */
-    flex-wrap: wrap;
 
 }
 #TablaResultados{
@@ -37,6 +43,5 @@ th, td{
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    
 
 }
