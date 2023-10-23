@@ -6,10 +6,37 @@ body {
     background-color: green;
     text-align: center;
     text-shadow: 2px 2px 5px;
+    text-shadow: 2px 2px 5px ;
+    animation-name: ejemplo;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: row;
+    
+    /* flex-wrap: nowrap; por defecto */
+    flex-wrap: wrap;
     
     display: flex;
     flex-direction: row;
     
     /* flex-wrap: nowrap; por defecto */
     flex-wrap: wrap;
+
+}
+#TablaResultados{
+    background-color: greenyellow;
+    border: 1px solid black;
+    border-style: inset;
+    position: relative;
+    left: 50%;
+
+
+}
+th, td{
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    
+
 }
