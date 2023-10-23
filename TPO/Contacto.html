@@ -6,8 +6,28 @@
     <title>Contacto</title>
     <link rel="icon" href="Imagenes/Icono-pelota-futbol.ico" type="image/x icon">
     <link rel="stylesheet" href="app.css">
+    <style>
+        form{
+            background-color: greenyellow;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1> Contacto</h1>
+    <h3>Este formulario es para contactar a los administradores.</h3>
+    <form action="Principal.html">
+        <label for="Nombre">Nombre:</label><br>
+        <input type="text" id="Nombre" name="Nombre" value=""><br>
+        <label for="Email">Email:</label><br>
+        <input type="text" id="Email" name="Email" value=""><br>
+        <label for="Razon">Motivo</label><br>
+       <select id="Razon" name="Razon">
+            <option value="Elegir">Elegir</option>
+            <option value="error">Error</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="denuncia">Denuncia</option>
+        </select><br><br>
+        <input type="submit" value="Enviar">
+      </form> 
 </body>
 </html>

@@ -5,6 +5,11 @@ body {
     color: black;
     background-color: green;
     text-align: center;
-    text-shadow: 2px 2px 5px
+    text-shadow: 2px 2px 5px;
     
+    display: flex;
+    flex-direction: row;
+    
+    /* flex-wrap: nowrap; por defecto */
+    flex-wrap: wrap;
 }
