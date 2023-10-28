@@ -13,10 +13,11 @@
     
 </head>
 <body>
-    <h1 id="TiruloPrinc">Liga Profesional de Futbol</h1>
-    <h2>Fecha 16</h2>
 
-    <table border="3", id="TablaResultados">
+    <h1 id="TiruloPrinc">Liga Profesional de Futbol</h1>
+    <h2 id="Numero_Fecha">Fecha 16</h2>
+
+    <table border="3", id="Fecha_16">
         <tr> 
             <th></th>
             <th>Local</th>
@@ -104,7 +105,194 @@
             </td>
         </tr>
     </table>
-<button id="Fecha_Anterior", class="Fecha"> Anterior Fecha</button>
-<button class="Fecha">Siguiente Fecha</button>
+<button id="Fecha_Anterior", class="Fecha", onclick="FechaAnterior()"> Anterior Fecha</button>
+<button class="Fecha", onclick="FechaSiguiente()">Siguiente Fecha</button>
+<table id="Fecha_15">
+    <tr> 
+        <th></th>
+        <th>Local</th>
+        <th>Resultados</th>
+        <th>Visitante</th>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Godoy Cruz</td>
+        <td>0 - 0</td>
+        <td>Union</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Barracas Central</td>
+        <td>3 - 0</td>
+        <td>Instituto</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Lanus</td>
+        <td>1 - 0</td>
+        <td>Huracan</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Belgrano</td>
+        <td>1 - 0</td>
+        <td>Atl Tucuman</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Colon</td>
+        <td>2 - 0</td>
+        <td>Banfield</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Argentinos</td>
+        <td>2 - 2</td>
+        <td>Independiente</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Rosario Central</td>
+        <td>4 - 0</td>
+        <td>Platense</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>River Plate</td>
+        <td>1 - 0</td>
+        <td>Boca Juniors</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Tigre</td>
+        <td>2 - 2</td>
+        <td>Newells</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Estudiantes (LP)</td>
+        <td>2 - 0</td>
+        <td>Velez</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Arsenal</td>
+        <td>0 - 1</td>
+        <td>Gimnasia (LP)</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>San Lorenzo</td>
+        <td>0 - 0</td>
+        <td>Def y Justicia</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Racing Club</td>
+        <td>2 - 4</td>
+        <td>Talleres (C)</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Central Cba (SdE)</td>
+        <td>0 - 1</td>
+        <td>Sarmiento (J)</td>
+    </tr>
+</table>
+<table id="Fecha_17">
+    <tr> 
+        <th></th>
+        <th>Local</th>
+        <th>Resultados</th>
+        <th>Visitante</th>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Arsenal</td>
+        <td>2 - 1</td>
+        <td>Independiente</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Godoy Cruz</td>
+        <td>2 - 0</td>
+        <td>Gimnasia (LP)</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Central Cba (SdE)</td>
+        <td>0 - 1</td>
+        <td>Union</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Rosario Central</td>
+        <td>2 - 1</td>
+        <td>Def y Justicia</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Estudiantes (LP)</td>
+        <td>1 - 0</td>
+        <td>Banfield</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Argentinos</td>
+        <td>0 - 1</td>
+        <td>Boca Juniors</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>San Lorenzo</td>
+        <td>2 - 0</td>
+        <td>Instituto</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Lanus</td>
+        <td>1 - 0</td>
+        <td>Newells</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Tigre</td>
+        <td>0 - 0</td>
+        <td>Atl Tucuman</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Belgrano</td>
+        <td>1 - 1</td>
+        <td>Talleres (C)</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Sarmiento (J)</td>
+        <td>0 - 0</td>
+        <td>Huracan</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Colon</td>
+        <td>1 - 1</td>
+        <td>Barracas Central</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>River Plate</td>
+        <td>2 - 1</td>
+        <td>Platense</td>
+    </tr>
+    <tr>
+        <td>Final</td>
+        <td>Racing Club</td>
+        <td>2 - 1</td>
+        <td>Velez</td>
+    </tr>
+</table>
+<script src="app.js">
+
+</script>
 </body>
 </html>
