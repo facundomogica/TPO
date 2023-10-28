@@ -35,13 +35,55 @@ body {
     border: 1px solid black;
     border-style: inset;
     position: relative;
-    left: 50%;
+    border-collapse: collapse;
+    
+  
+    margin-left: 34%;
 
 
 }
-th, td{
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
 
+
+
+/* Estilo para las celdas de la tabla */
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Estilo para las filas pares */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+#Fecha_Anterior{
+    margin-left: 42%;
+}
+.Fecha{
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin bordes */
+    color: black; /* Color del texto */
+    padding: 15px 32px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block;
+    font-size: 16px;
+   font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
