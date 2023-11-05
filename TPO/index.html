@@ -9,290 +9,146 @@
     <header class="sticky">
         <nav> <a href="Estadios.html">Estadios</a> | <a href="Resumen_Fecha.html">Resumen Fecha</a> | <a href="Contacto.html">Contacto</a></nav>
     </header>
-    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
     
 </head>
 <body>
 
     <h1 id="TiruloPrinc">Liga Profesional de Futbol</h1>
-    <h2 id="Numero_Fecha">Fecha 16</h2>
+    
 
-    <table border="3", id="Fecha_16">
-        <tr> 
-            <th></th>
-            <th>Local</th>
-            <th>Resultados</th>
-            <th>Visitante</th>
-        </tr>
-        <tr>
-            <td>Finalizado</td>
-            <td>Huracan</td>
-            <td>0-0</td>
-            <td>Godoy Cruz</td>
-        </tr>
-        <tr>
-            <td>Finalizado</td>
-            <td>Atl Tucuman	</td>
-            <td>1-2</td>
-            <td>Argentinos</td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Independiente</td>
-            <td>2-1</td>
-            <td>Tigre</td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Banfield</td>
-            <td>1-2</td>
-            <td>San Lorenzo	 </td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Instituto</td>
-            <td>1-0</td>
-            <td>Colon</td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Newells</td>
-            <td>2-0</td>
-            <td>Arsenal</td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Def y Justicia	
-            </td>
-            <td>1-1</td>
-            <td>Estudiantes (LP)	
-            </td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Platense</td>
-            <td>3-0</td>
-            <td>Racing Club	
-            </td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Boca Juniors	</td>
-            <td>2-0</td>
-            <td>Belgrano</td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Talleres (C)	</td>
-            <td>2-1</td>
-            <td>River Plate	
-            </td>
-        </tr> <tr>
-            <td>Finalizado</td>
-            <td>Barracas Central	</td>
-            <td>2-2</td>
-            <td>Central Cba (SdE)	
-            </td>
-        </tr>
-        <tr>
-            <td>Finalizado</td>
-            <td>Union           </td>
-            <td>0-2</td>
-            <td>Sarmiento (J)          </td>
-        </tr><tr>
-            <td>Finalizado</td>
-            <td>Gimnasia (LP)	</td>
-            <td>1-0</td>
-            <td>Lanus	
-            </td>
-        </tr><tr>
-            <td>Finalizado</td>
-            <td>Velez	</td>
-            <td>0-0</td>
-            <td>Rosario Central	
-            </td>
-        </tr>
-    </table>
-<button id="Fecha_Anterior", class="Fecha", onclick="FechaAnterior()"> Anterior Fecha</button>
-<button class="Fecha", onclick="FechaSiguiente()">Siguiente Fecha</button>
-<table id="Fecha_15">
-    <tr> 
-        <th></th>
-        <th>Local</th>
-        <th>Resultados</th>
-        <th>Visitante</th>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Godoy Cruz</td>
-        <td>0 - 0</td>
-        <td>Union</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Barracas Central</td>
-        <td>3 - 0</td>
-        <td>Instituto</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Lanus</td>
-        <td>1 - 0</td>
-        <td>Huracan</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Belgrano</td>
-        <td>1 - 0</td>
-        <td>Atl Tucuman</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Colon</td>
-        <td>2 - 0</td>
-        <td>Banfield</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Argentinos</td>
-        <td>2 - 2</td>
-        <td>Independiente</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Rosario Central</td>
-        <td>4 - 0</td>
-        <td>Platense</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>River Plate</td>
-        <td>1 - 0</td>
-        <td>Boca Juniors</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Tigre</td>
-        <td>2 - 2</td>
-        <td>Newells</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Estudiantes (LP)</td>
-        <td>2 - 0</td>
-        <td>Velez</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Arsenal</td>
-        <td>0 - 1</td>
-        <td>Gimnasia (LP)</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>San Lorenzo</td>
-        <td>0 - 0</td>
-        <td>Def y Justicia</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Racing Club</td>
-        <td>2 - 4</td>
-        <td>Talleres (C)</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Central Cba (SdE)</td>
-        <td>0 - 1</td>
-        <td>Sarmiento (J)</td>
-    </tr>
-</table>
-<table id="Fecha_17">
-    <tr> 
-        <th></th>
-        <th>Local</th>
-        <th>Resultados</th>
-        <th>Visitante</th>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Arsenal</td>
-        <td>2 - 1</td>
-        <td>Independiente</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Godoy Cruz</td>
-        <td>2 - 0</td>
-        <td>Gimnasia (LP)</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Central Cba (SdE)</td>
-        <td>0 - 1</td>
-        <td>Union</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Rosario Central</td>
-        <td>2 - 1</td>
-        <td>Def y Justicia</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Estudiantes (LP)</td>
-        <td>1 - 0</td>
-        <td>Banfield</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Argentinos</td>
-        <td>0 - 1</td>
-        <td>Boca Juniors</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>San Lorenzo</td>
-        <td>2 - 0</td>
-        <td>Instituto</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Lanus</td>
-        <td>1 - 0</td>
-        <td>Newells</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Tigre</td>
-        <td>0 - 0</td>
-        <td>Atl Tucuman</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Belgrano</td>
-        <td>1 - 1</td>
-        <td>Talleres (C)</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Sarmiento (J)</td>
-        <td>0 - 0</td>
-        <td>Huracan</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Colon</td>
-        <td>1 - 1</td>
-        <td>Barracas Central</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>River Plate</td>
-        <td>2 - 1</td>
-        <td>Platense</td>
-    </tr>
-    <tr>
-        <td>Final</td>
-        <td>Racing Club</td>
-        <td>2 - 1</td>
-        <td>Velez</td>
-    </tr>
-</table>
-<script src="app.js">
-
-</script>
-</body>
+    <div id="app">
+        <h2 id="Numero_Fecha"> {{ Fecha2 +Fechaact}} </h2>
+        <table id="Fecha_16">
+          <thead>
+            <tr>
+                <th></th>
+                <th>Local</th>
+                <th>Resultados</th>
+                <th>Visitante</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="Resultado in Resultados">
+              <td>{{ Resultado.a }}</td>
+              <td>{{ Resultado.Local }}</td>
+              <td>{{ Resultado.Resultados }}</td>
+              <td>{{ Resultado.Visitante }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button @click="cambiarContenido" id="Fecha_Anterior" class="Fecha">Fecha Anterior</button>
+        <button @click="cambiarContenido2"  class="Fecha">Fecha Siguiente</button>
+    </div>
+  
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          Fechaact:16,
+          Fecha2:"Fecha ",
+          Resultados: [
+            { a: 'Finalizado', Local: "Huracan", Resultados:"0-0", Visitante:"Godoy Cruz" },
+            { a: 'Finalizado', Local: "Atl Tucuman", Resultados:"1-2", Visitante:"Argentinos" },
+            { a: 'Finalizado', Local: "Independiente", Resultados:"2-1", Visitante:"Tigre" },
+            { a: 'Finalizado', Local: "Banfield", Resultados:"1-2", Visitante:"San Lorenzo" },
+            { a: 'Finalizado', Local: "Instituto", Resultados:"1-0", Visitante:"Colon" },
+            { a: 'Finalizado', Local: "Newells", Resultados:"2-0", Visitante:"Arsenal" },
+            { a: 'Finalizado', Local: "Def y Justicia	", Resultados:"1-1", Visitante:"Estudiantes (LP)" },
+            { a: 'Finalizado', Local: "Platense", Resultados:"3-0", Visitante:"Racing Club" },
+            { a: 'Finalizado', Local: "Boca Juniors", Resultados:"2-0", Visitante:"Belgrano" },
+            { a: 'Finalizado', Local: "Talleres (C)", Resultados:"2-1", Visitante:"River Plate" },
+            { a: 'Finalizado', Local: "Barracas Central", Resultados:"2-2", Visitante:"Central Cba (SdE)" },
+            { a: 'Finalizado', Local: "Union", Resultados:"0-2", Visitante:"Sarmiento (J)" },
+            { a: 'Finalizado', Local: "Gimnasia (LP)", Resultados:"1-0", Visitante:"Lanus" },
+            { a: 'Finalizado', Local: "Velez", Resultados:"0-0", Visitante:"Rosario Central" }
+          ]
+        },
+        methods: {
+          cambiarContenido() {
+            if (this.Fechaact>15){this.Fechaact=this.Fechaact-1;}
+           
+            if (this.Fechaact==15) {
+              this.Resultados = [
+              { a: 'Finalizado', Local: "Godoy Cruz", Resultados:"0 - 0", Visitante:"Union" },
+              { a: 'Finalizado', Local: "Barracas Central", Resultados:"3 - 0", Visitante:"Instituto" },
+              { a: 'Finalizado', Local: "Lanus", Resultados:"1 - 0", Visitante:"Huracan" },
+              { a: 'Finalizado', Local: "Belgrano", Resultados:"1 - 0	", Visitante:"Atl Tucuman" },
+              { a: 'Finalizado', Local: "Colon", Resultados:"2 - 0", Visitante:"Banfield" },
+              { a: 'Finalizado', Local: "Argentinos", Resultados:"2 - 2", Visitante:"Independiente" },
+              { a: 'Finalizado', Local: "Rosario Central	", Resultados:"4 - 0", Visitante:"Platense" },
+              { a: 'Finalizado', Local: "River Plate	", Resultados:"1 - 0", Visitante:"Boca Juniors" },
+              { a: 'Finalizado', Local: "Tigre", Resultados:"2 - 2", Visitante:"Newells" },
+              { a: 'Finalizado', Local: "Estudiantes (LP)	", Resultados:"2 - 0", Visitante:"Velez" },
+              { a: 'Finalizado', Local: "Arsenal", Resultados:"0 - 1", Visitante:"Gimnasia (LP)" },
+              { a: 'Finalizado', Local: "San Lorenzo", Resultados:"0 - 0", Visitante:"Def y Justicia" },
+              { a: 'Finalizado', Local: "Racing Club", Resultados:"2 - 4", Visitante:"Talleres (C)" },
+              { a: 'Finalizado', Local: "Central Cba (SdE)", Resultados:"0 - 1", Visitante:"Sarmiento (J)" }
+              ];
+            } 
+            if (this.Fechaact==16) {
+              this.Resultados = [
+            { a: 'Finalizado', Local: "Huracan", Resultados:"0-0", Visitante:"Godoy Cruz" },
+            { a: 'Finalizado', Local: "Atl Tucuman", Resultados:"1-2", Visitante:"Argentinos" },
+            { a: 'Finalizado', Local: "Independiente", Resultados:"2-1", Visitante:"Tigre" },
+            { a: 'Finalizado', Local: "Banfield", Resultados:"1-2", Visitante:"San Lorenzo" },
+            { a: 'Finalizado', Local: "Instituto", Resultados:"1-0", Visitante:"Colon" },
+            { a: 'Finalizado', Local: "Newells", Resultados:"2-0", Visitante:"Arsenal" },
+            { a: 'Finalizado', Local: "Def y Justicia	", Resultados:"1-1", Visitante:"Estudiantes (LP)" },
+            { a: 'Finalizado', Local: "Platense", Resultados:"3-0", Visitante:"Racing Club" },
+            { a: 'Finalizado', Local: "Boca Juniors", Resultados:"2-0", Visitante:"Belgrano" },
+            { a: 'Finalizado', Local: "Talleres (C)", Resultados:"2-1", Visitante:"River Plate" },
+            { a: 'Finalizado', Local: "Barracas Central", Resultados:"2-2", Visitante:"Central Cba (SdE)" },
+            { a: 'Finalizado', Local: "Union", Resultados:"0-2", Visitante:"Sarmiento (J)" },
+            { a: 'Finalizado', Local: "Gimnasia (LP)", Resultados:"1-0", Visitante:"Lanus" },
+            { a: 'Finalizado', Local: "Velez", Resultados:"0-0", Visitante:"Rosario Central" }
+          ];
+            } 
+          },
+          cambiarContenido2() {
+            if (this.Fechaact<17){this.Fechaact=this.Fechaact+1;}
+            
+            if (this.Fechaact==17) {
+              this.Resultados = [
+              { a: 'Finalizado', Local: "Arsenal", Resultados:"2 - 1", Visitante:"Independiente" },
+              { a: 'Finalizado', Local: "Godoy Cruz", Resultados:"2 - 0", Visitante:"Gimnasia (LP)" },
+              { a: 'Finalizado', Local: "Central Cba (SdE)", Resultados:"0 - 1", Visitante:"Union" },
+              { a: 'Finalizado', Local: "Rosario Central", Resultados:"2 - 1", Visitante:"Def y Justicia" },
+              { a: 'Finalizado', Local: "Estudiantes (LP)", Resultados:"1 - 0", Visitante:"Banfield" },
+              { a: 'Finalizado', Local: "Argentinos", Resultados:"0 - 1", Visitante:"Boca Juniors" },
+              { a: 'Finalizado', Local: "San Lorenzo", Resultados:"2 - 0", Visitante:"Instituto" },
+              { a: 'Finalizado', Local: "Lanus", Resultados:"1 - 0", Visitante:"Newells" },
+              { a: 'Finalizado', Local: "Tigre", Resultados:"0 - 0", Visitante:"Atl Tucuman" },
+              { a: 'Finalizado', Local: "Belgrano", Resultados:"1 - 1", Visitante:"Talleres (C)" },
+              { a: 'Finalizado', Local: "Sarmiento (J)", Resultados:"0 - 0", Visitante:"Huracan" },
+              { a: 'Finalizado', Local: "Colon", Resultados:"1 - 1", Visitante:"Barracas Central" },
+              { a: 'Finalizado', Local: "River Plate", Resultados:"2 - 1", Visitante:"Platense" },
+              { a: 'Finalizado', Local: "Racing Club", Resultados:"2 - 1", Visitante:"Velez" }
+              ];
+            } 
+            if (this.Fechaact==16) {
+              this.Resultados = [
+            { a: 'Finalizado', Local: "Huracan", Resultados:"0-0", Visitante:"Godoy Cruz" },
+            { a: 'Finalizado', Local: "Atl Tucuman", Resultados:"1-2", Visitante:"Argentinos" },
+            { a: 'Finalizado', Local: "Independiente", Resultados:"2-1", Visitante:"Tigre" },
+            { a: 'Finalizado', Local: "Banfield", Resultados:"1-2", Visitante:"San Lorenzo" },
+            { a: 'Finalizado', Local: "Instituto", Resultados:"1-0", Visitante:"Colon" },
+            { a: 'Finalizado', Local: "Newells", Resultados:"2-0", Visitante:"Arsenal" },
+            { a: 'Finalizado', Local: "Def y Justicia	", Resultados:"1-1", Visitante:"Estudiantes (LP)" },
+            { a: 'Finalizado', Local: "Platense", Resultados:"3-0", Visitante:"Racing Club" },
+            { a: 'Finalizado', Local: "Boca Juniors", Resultados:"2-0", Visitante:"Belgrano" },
+            { a: 'Finalizado', Local: "Talleres (C)", Resultados:"2-1", Visitante:"River Plate" },
+            { a: 'Finalizado', Local: "Barracas Central", Resultados:"2-2", Visitante:"Central Cba (SdE)" },
+            { a: 'Finalizado', Local: "Union", Resultados:"0-2", Visitante:"Sarmiento (J)" },
+            { a: 'Finalizado', Local: "Gimnasia (LP)", Resultados:"1-0", Visitante:"Lanus" },
+            { a: 'Finalizado', Local: "Velez", Resultados:"0-0", Visitante:"Rosario Central" }
+          ];
+            } 
+          }
+        }
+      });
+    </script>
+    
+  </body>
 </html>

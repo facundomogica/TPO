@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de Vue.js en HTML</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button @click="cambiarContenido">Cambiar Contenido</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="persona in personas">
+          <td>{{ persona.nombre }}</td>
+          <td>{{ persona.edad }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        mostrarContenido1: true,
+        personas: [
+          { nombre: 'Persona 1', edad: 25 },
+          { nombre: 'Persona 2', edad: 30 },
+          { nombre: 'Persona 3', edad: 35 }
+        ]
+      },
+      methods: {
+        cambiarContenido() {
+          this.mostrarContenido1 = !this.mostrarContenido1;
+          if (this.mostrarContenido1) {
+            this.personas = [
+              { nombre: 'Persona 1', edad: 25 },
+              { nombre: 'Persona 2', edad: 30 },
+              { nombre: 'Persona 3', edad: 35 }
+            ];
+          } else {
+            this.personas = [
+              { nombre: 'Persona 4', edad: 40 },
+              { nombre: 'Persona 5', edad: 45 }
+            ];
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
