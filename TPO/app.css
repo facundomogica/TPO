@@ -6,20 +6,11 @@ body {
     background-color: green;
     text-align: center;
     text-shadow: 2px 2px 5px ;
-    animation-name: ejemplo;
-    animation-duration: 4s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    
+    display:grid;
+    box-sizing: initial;
+    padding:12px;
 }
-@keyframes ejemplo {
-    0% {from{ background-color: green;}}
-    33% {from{ background-color: greenyellow;}}
-    66% {from{ background-color: green;}}
-   100% {from{ background-color: greenyellow;}}
 
-
-}
 .sticky{
     position: sticky;
     background-color: #c9f3c9;

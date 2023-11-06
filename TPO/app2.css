@@ -3,8 +3,8 @@ body {
 }
 h1 {
     background-color: #ffcc00; /* Cambia este valor al color que desees */
-    
-    
+    box-sizing: auto;
+    text-transform:capitalize;
    text-align: center;
     padding: 12px;
     margin: 20px;
