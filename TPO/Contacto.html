@@ -106,6 +106,7 @@ input:invalid {
           document.getElementById('Razon').addEventListener('input', function () {
             this.setCustomValidity('');
             document.getElementById('mensajeError').innerHTML = '';
+            alert("Formulario Enviado")
         });
         traerDatosAPI()
         function traerDatosAPI() {
