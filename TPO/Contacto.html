@@ -6,45 +6,83 @@
     <title>Contacto</title>
     <link rel="icon" href="Imagenes/Icono-pelota-futbol.ico" type="image/x icon">
     <link rel="stylesheet" href="app.css">
-    <style>
-        form{
-            background-color: greenyellow;
-        }
-    </style>
+    
 </head>
 <body>
+  <div class="Contacto">
     <h1> Contacto</h1>
     <h3>Este formulario es para contactar a los administradores.</h3>
-    <form name="fvalida" action="index.html">
+    <form name="fvalida" action="index.html" onsubmit="return validarFormulario()">
         <label for="Nombre">Nombre:</label><br>
         <input type="text" id="Nombre" name="Nombre" value="" required><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-        <div class="error" style="display:none;">Por favor, ingresa un email válido.</div>
+        
         <br>
         <label for="Razon">Motivo</label><br>
        <select id="Razon" name="Razon" >
-            <option value="Elegir">Elegir</option>
+            <option value="" disabled selected>Elegir</option>
             <option value="error">Error</option>
             <option value="sugerencia">Sugerencia</option>
             <option value="denuncia">Denuncia</option>
         </select><br><br>
         <input type="submit" value="Enviar" >
       </form>
-      <br>
-      <br>
-      <br>
-      <br>
-      <button onclick="traerDatosAPI() ">Editor:</button>
+    </div>
+     <div class="Editor">
+      <button id="editor" onclick="traerDatosAPI() ">Editor:</button>
       <div id="contenido" class="contenido">
        
     </div>
+  </div>
     <style>
-      .contenido{
-        box-sizing: border-box;
-        background-color: green;
+     #editor{all: unset;}
+     .Editor{
+      
+        max-width: 400px;
+        border-radius: 8px;
+        padding: 5px;
+        position: absolute;
+        bottom: 15px;
         box-decoration-break: initial;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: white;
       }
+    
+      h1 {
+    text-align: center;
+    color: #333;
+    }
+      .Contacto{
+        
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      }
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        } 
+        input,
+textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
     </style>
       <script>
         document.querySelector('form').addEventListener('submit', function(event) {
@@ -52,15 +90,23 @@
             event.preventDefault();
             document.querySelector('.error').style.display = 'block';
           }
-          if (document.fvalida.Razon.selectedIndex == 0) {
-          alert("Debe seleccionar un motivo de su contacto.");
-            document.fvalida.interes.focus();
-            document.querySelector('.error').style.display = 'block';
-            return;}
-            
+          
         });
-       
-        
+        function validarFormulario() {
+            var opciones = document.getElementById('Razon');
+            
+            // Verificar si la primera opción está seleccionada
+            if (opciones.selectedIndex == 0) {
+              opciones.setCustomValidity('Elegir una opcion')
+                
+                return false; // Evita que el formulario se envíe
+            }
+            return true;
+          }
+          document.getElementById('Razon').addEventListener('input', function () {
+            this.setCustomValidity('');
+            document.getElementById('mensajeError').innerHTML = '';
+        });
         traerDatosAPI()
         function traerDatosAPI() {
 
@@ -84,6 +130,7 @@
                 })
         }
         </script>
+        
     
 </body>
 </html>
