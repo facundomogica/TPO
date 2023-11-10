@@ -11,15 +11,21 @@ body {
     padding:12px;
 }
 
-.sticky{
-    position: sticky;
+
+.Conteiner{
+    position: relative;
     background-color: #c9f3c9;
     background-size: auto;
     font-size: 160%;
     text-align: center;
+   
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
-    
-
+}
+.item{
+    letter-spacing: 0.1em;
+    text-decoration: none;
 }
 #Fecha_16{
     background-color: greenyellow;

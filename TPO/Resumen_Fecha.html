@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen Fecha</title>
     <link rel="icon" href="Imagenes/Icono-pelota-futbol.ico" type="image/x icon">
-    <header class="sticky">
-        <nav> <a href="index.html">Volver</a> </nav>
+    <header >
+        <div class="Conteiner">
+            <nav> <a href="index.html" class="item" >Volver</a> </nav>
+        </div>
     </header>
     
 </head>
@@ -37,13 +39,35 @@
         body {
             background-image: url("Imagenes/Fondo.jpg")
         }
-        .sticky{
-            position: sticky;
-            background-color: #c9f3c9;
-            background-size: auto;
-            font-size: 160%;
-            text-align: center;
+        .Conteiner{
+    position: relative;
+    background-color: #c9f3c9;
+    background-size: auto;
+    font-size: 160%;
+    text-align: center;
+   
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+.item{
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+        @media(max-width:768px){
+        iframe {
+        flex-direction: column;
+        align-items: flex-start;
+        width:60%;
+        height:350px;
         }
+        iframe{
+            width:45%;
+        height:200px;
+        }
+    
+}
     </style>
 </body>
 </html>

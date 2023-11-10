@@ -15,29 +15,74 @@
 <body>
     <h1> Contacto</h1>
     <h3>Este formulario es para contactar a los administradores.</h3>
-    <form action="index.html">
+    <form name="fvalida" action="index.html">
         <label for="Nombre">Nombre:</label><br>
-        <input type="text" id="Nombre" name="Nombre" value=""><br>
+        <input type="text" id="Nombre" name="Nombre" value="" required><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         <div class="error" style="display:none;">Por favor, ingresa un email válido.</div>
         <br>
         <label for="Razon">Motivo</label><br>
-       <select id="Razon" name="Razon">
+       <select id="Razon" name="Razon" >
             <option value="Elegir">Elegir</option>
             <option value="error">Error</option>
             <option value="sugerencia">Sugerencia</option>
             <option value="denuncia">Denuncia</option>
         </select><br><br>
-        <input type="submit" value="Enviar">
-      </form> 
+        <input type="submit" value="Enviar" >
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button onclick="traerDatosAPI() ">Editor:</button>
+      <div id="contenido" class="contenido">
+       
+    </div>
+    <style>
+      .contenido{
+        box-sizing: border-box;
+        background-color: green;
+        box-decoration-break: initial;
+      }
+    </style>
       <script>
         document.querySelector('form').addEventListener('submit', function(event) {
           if (!event.target.checkValidity()) {
             event.preventDefault();
             document.querySelector('.error').style.display = 'block';
           }
+          if (document.fvalida.Razon.selectedIndex == 0) {
+          alert("Debe seleccionar un motivo de su contacto.");
+            document.fvalida.interes.focus();
+            document.querySelector('.error').style.display = 'block';
+            return;}
+            
         });
+       
+        
+        traerDatosAPI()
+        function traerDatosAPI() {
+
+            fetch('https://randomuser.me/api') 
+
+                .then(datos => datos.json()) 
+               
+                .then(datos => {
+                    console.log(datos)
+                    
+                    contenido.innerHTML = `
+                        <div class="tarjeta">
+                           
+                            <!-- Muestra el nombre obtenido de los datos de la API. -->
+                            Nombre: ${datos.results[0].name.last}, ${datos.results[0].name.first}<br>
+
+                          
+                            <!-- Muestra la dirección de correo electrónico obtenida de los datos de la API. -->
+                            ${datos.results[0].email}
+                        </div>`;
+                })
+        }
         </script>
     
 </body>
